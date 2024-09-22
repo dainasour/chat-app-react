@@ -1,0 +1,132 @@
+.profile {
+  min-height: 100vh;
+  background: url(/background.png) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Added padding to prevent edges from being cut off on smaller screens */
+}
+
+.profile-container {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 700px;
+  border-radius: 10px;
+  padding: 20px;
+  gap: 20px;
+  /* Ensure the container shrinks properly for smaller screens */
+}
+
+.profile-pic {
+  max-width: 160px;
+  aspect-ratio: 1/1;
+  margin: 20px auto;
+  border-radius: 50%;
+}
+
+.profile form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  width: 100%;
+}
+
+.profile form h3 {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.profile label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: grey;
+  cursor: pointer;
+}
+
+.profile label img {
+  width: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.profile input,
+textarea {
+  padding: 10px;
+  min-width: 300px;
+  border: 1px solid #c9c9c9;
+  outline-color: #077eff;
+  font-size: 14px;
+}
+
+.profile form button {
+  border: none;
+  color: white;
+  background-color: #077eff;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.profile form button:hover {
+  background-color: #005bb5;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    min-width: 90%;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .profile-pic {
+    max-width: 120px;
+  }
+
+  .profile form {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .profile input,
+  textarea {
+    min-width: 100%;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 15px;
+    gap: 10px;
+    min-width: 100%;
+  }
+
+  .profile-pic {
+    max-width: 100px;
+  }
+
+  .profile form {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .profile input,
+  textarea {
+    min-width: 100%;
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .profile form button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
